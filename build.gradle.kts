@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm") version "1.6.10"
-    id("com.apollographql.apollo3") version "3.1.0"
+    id("com.apollographql.apollo3") version "3.2.2"
 }
 
 group = "org.example"
@@ -16,7 +16,7 @@ allprojects {
 
 
 dependencies {
-    implementation("com.apollographql.apollo3", "apollo-runtime", "3.1.0")
+    implementation("com.apollographql.apollo3", "apollo-runtime", "3.2.2")
 }
 
 apollo {
