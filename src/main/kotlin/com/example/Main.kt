@@ -6,11 +6,11 @@ import okhttp3.OkHttpClient
 import java.net.InetSocketAddress
 import java.net.Proxy
 
-private const val USE_PROXY = true
+private const val USE_PROXY = false
 
 suspend fun main() {
     val apolloClient = ApolloClient.Builder()
-        .serverUrl("http://apollo-fullstack-tutorial.herokuapp.com/graphql")
+        .serverUrl("https://apollo-fullstack-tutorial.herokuapp.com/graphql")
         .apply {
             if (USE_PROXY) okHttpClient(
                 OkHttpClient.Builder()
