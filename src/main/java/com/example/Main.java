@@ -14,6 +14,9 @@ public class Main {
 
         ApolloCall<LaunchListQuery.Data> queryCall = apolloClient.query(new LaunchListQuery());
         Single<ApolloResponse<LaunchListQuery.Data>> queryResponse = Rx3Apollo.single(queryCall);
-        queryResponse.subscribe(response -> System.out.println(response.data));
+        queryResponse.subscribe(response -> {
+            System.out.println(response.data);
+            apolloClient.dispose();
+        });
     }
 }
