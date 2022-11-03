@@ -1,12 +1,12 @@
 plugins {
     java
-    id("com.apollographql.apollo3") version "3.6.0"
+    id("com.apollographql.apollo3") version "3.7.0-SNAPSHOT"
     application
 }
 
 allprojects {
     repositories {
-//        mavenLocal()
+        mavenLocal()
         google()
         mavenCentral()
     }
@@ -14,8 +14,8 @@ allprojects {
 
 
 dependencies {
-    implementation("com.apollographql.apollo3", "apollo-runtime")
-    implementation("com.apollographql.apollo3", "apollo-rx3-support")
+    implementation("com.apollographql.apollo3", "apollo-runtime-java")
+    implementation("com.apollographql.apollo3", "apollo-rx3-support-java")
 }
 
 apollo {
